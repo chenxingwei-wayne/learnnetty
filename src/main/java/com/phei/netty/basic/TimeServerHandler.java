@@ -9,6 +9,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
 public class TimeServerHandler extends ChannelHandlerAdapter {
+    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws UnsupportedEncodingException {
         ByteBuf buf = (ByteBuf) msg;
         byte[] req = new byte[buf.readableBytes()];
@@ -21,10 +22,12 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
         ctx.write(resp);
     }
 
+    @Override
     public void channelReadComplete(ChannelHandlerContext ctx) {
         ctx.flush();
     }
 
+    @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         ctx.close();
     }
