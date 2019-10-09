@@ -8,11 +8,11 @@ public class EchoServerHandler extends ChannelHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         String body = (String) msg;
         System.out.println("receive client msg: " + body);
-        ctx.write(msg);
+        ctx.write(body);
     }
 
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        cause.printStackTrace();;
+        cause.printStackTrace();
         ctx.close();
     }
 }

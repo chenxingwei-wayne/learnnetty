@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<binding value-style="element">
+
+    <mapping name="Root" class="com.phei.netty.xml.pojo.simpleuse.JibxBean" ordered="false">
+        <value name="Name" field="name" usage="optional" />
+        <value name="Age" field="age" usage="optional" />
+        <value name="Sex" field="sex" usage="optional" />
+    </mapping>
+
+</binding>

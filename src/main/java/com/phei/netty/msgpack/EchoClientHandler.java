@@ -1,15 +1,11 @@
 package com.phei.netty.msgpack;
 
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 
 public class EchoClientHandler extends ChannelHandlerAdapter {
 
     private final int sendNumber;
-
-    private int counter;
-    static final String ECHO_REQ = "Hi wayne, welcome to Netty.$_";
 
     public EchoClientHandler(int sendNumber) {
         this.sendNumber = sendNumber;
