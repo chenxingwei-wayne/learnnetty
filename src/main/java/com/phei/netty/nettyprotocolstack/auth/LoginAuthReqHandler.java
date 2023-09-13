@@ -5,7 +5,6 @@ import com.phei.netty.nettyprotocolstack.NettyMessage;
 import com.phei.netty.nettyprotocolstack.pojo.Header;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-import sun.plugin2.message.Message;
 
 import java.awt.*;
 
